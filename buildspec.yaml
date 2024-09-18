@@ -3,10 +3,10 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - chmod +x ./gradlew
+      - chmod +x ./gradlew     # Change Maven clean install to Gradle clean build
       - echo Logging in to Amazon ECR...
       - aws --version
-      - REPOSITORY_URI = 724772093754.dkr.ecr.ap-south-1.amazonaws.com/prakhar-sample
+      - REPOSITORY_URI=724772093754.dkr.ecr.ap-south-1.amazonaws.com/prakhar-sample
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin $REPOSITORY_URI
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
