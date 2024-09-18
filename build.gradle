@@ -25,7 +25,7 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'io.swagger.core.v3:swagger-annotations:2.1.6'      // Swagger Annotations
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

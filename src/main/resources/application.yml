@@ -1,0 +1,7 @@
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /v2/api-docs
+      swagger-ui:
+        enabled: true
